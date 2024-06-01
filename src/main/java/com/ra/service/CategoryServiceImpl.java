@@ -14,4 +14,10 @@ public class CategoryServiceImpl implements CategoryService{
     public List<Category> getAll() {
         return categoryRepository.findAll();
     }
+
+    @Override
+    public Boolean save(Category category) {
+        categoryRepository.save(category);
+        return true;
+    }
 }
